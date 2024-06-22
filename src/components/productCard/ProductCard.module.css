@@ -1,0 +1,29 @@
+.productCardContainer {
+  width: 200px;
+  background-color: #fefefe;
+}
+
+.productCardContainer:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.imagePlaceholder {
+  background-color: rgb(235, 235, 235);
+  height: 200px;
+  width: 200px;
+}
+
+.productCardInfo {
+  padding: 16px;
+}
+
+.productCardInfo p {
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+}
+
+.productTitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
