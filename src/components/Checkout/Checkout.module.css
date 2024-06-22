@@ -1,0 +1,14 @@
+.checkoutContainer {
+  padding: 32px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  background-color: #f1f1f5;
+}
+
+.checkoutTitle p {
+  font-weight: 600;
+  font-size: 1.5rem;
+}

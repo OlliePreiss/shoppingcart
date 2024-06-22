@@ -1,0 +1,83 @@
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 300px;
+  margin: 8px;
+}
+
+.discountCodeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  background-color: #f1f1f5;
+}
+
+.downArrow {
+  height: 1rem;
+  width: 1rem;
+}
+
+.summaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 8px;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  background-color: #f1f1f5;
+}
+
+.summaryContainer p {
+  margin: 4px;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shipping {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.paymentContainer {
+  margin: 16px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.paymentButton {
+  margin: 4px;
+  width: 100%;
+  background-color: white;
+}
+
+.paymentButton:hover {
+  color: white;
+  background-color: black;
+  transition: 0.2s ease-in-out;
+}
+
+.lineBreak {
+  width: 100%;
+}

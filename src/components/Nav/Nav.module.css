@@ -1,0 +1,56 @@
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  background-color: #f1f1f5;
+}
+
+.navContainer p {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  color: grey;
+}
+
+.navContainer img {
+  height: 32px;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.growName {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.searchContainer {
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchBar {
+  width: 100%;
+  border: none;
+  background-color: #f1f1f5;
+}
+
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.loginTab {
+  margin-left: 16px;
+  margin-right: 16px;
+}

@@ -1,0 +1,29 @@
+.coverContainer {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  margin: 8px;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 20%;
+  border-radius: 4px;
+  background-color: #f1f1f5;
+}
+
+.description {
+  width: 70%;
+}
+
+.coverButton {
+  margin: 4px;
+  border: solid 1px black;
+  padding: 8px 32px;
+  width:fit-content;
+  background-color: white;
+}
+
+.coverButton:hover {
+  color: white;
+  background-color: black;
+  transition: 0.2s ease-in-out;
+}
