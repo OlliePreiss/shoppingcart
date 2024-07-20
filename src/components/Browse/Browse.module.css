@@ -1,3 +1,8 @@
+.browseContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 .indexContainer {
   padding: 32px;
   display: flex;

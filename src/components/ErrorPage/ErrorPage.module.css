@@ -1,20 +1,15 @@
-.coverContainer {
+.errorContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 500px;
   margin: 8px;
-  padding-top: 10%;
-  padding-left: 10%;
-  padding-right: 20%;
   border-radius: 4px;
   background-color: #f1f1f5;
 }
 
-.description {
-  width: 70%;
-}
-
-.coverButton {
+.errorButton {
   margin: 4px;
   border: solid 1px black;
   padding: 8px 32px;
@@ -24,7 +19,7 @@
   text-decoration: none;
 }
 
-.coverButton:hover {
+.errorButton:hover {
   color: white;
   background-color: black;
   transition: 0.2s ease-in-out;

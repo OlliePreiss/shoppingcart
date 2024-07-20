@@ -1,13 +1,16 @@
 import classes from './ProductCard.module.css'
 
-function ProductCard() {
+function ProductCard({
+  product
+}) {
   return(
     <div className={classes.productCardContainer}>
-      <div className={classes.imagePlaceholder}></div>
+      <div className={classes.imageContainer}>
+        <img src={product.image} alt="" className={classes.productImage}/>
+      </div>
       <div className={classes.productCardInfo}>
-        <p className={classes.productTitle}> The Samina </p>
-        <p className='productDescription'> Premium ceramic glazed pot and saucer </p>
-        <p className='price'> £20.00 </p>
+        <p className={classes.productTitle}> {product.title} </p>
+        <p className={classes.productPrice}> £{product.price.toFixed(2)} </p>
       </div>
     </div>
   )

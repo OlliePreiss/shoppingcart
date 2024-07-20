@@ -1,4 +1,12 @@
 .checkoutContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.basketContainer {
+  width: 100%;
+  margin: 8px;
   padding: 32px;
   display: flex;
   justify-content: left;
@@ -8,7 +16,7 @@
   background-color: #f1f1f5;
 }
 
-.checkoutTitle p {
+.basketTitle p {
   font-weight: 600;
   font-size: 1.5rem;
 }

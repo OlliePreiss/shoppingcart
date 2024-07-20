@@ -4,8 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 8px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 8px 16px;
   border-radius: 4px;
   background-color: #f1f1f5;
 }
@@ -29,6 +28,8 @@
 .growName {
   font-weight: 600;
   font-size: 1.5rem;
+  color: grey;
+  text-decoration: none;
 }
 
 .searchContainer {

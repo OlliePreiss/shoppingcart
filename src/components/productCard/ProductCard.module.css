@@ -1,7 +1,11 @@
 .productCardContainer {
-  width: 300px;
-  margin: 64px;
-  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin: 8px;
+  background-color: rgb(245, 245, 245, 1);
+  border-radius: 8px;
 }
 
 .productCardContainer:hover {
@@ -9,10 +13,18 @@
   transition: box-shadow 0.2s ease-in-out;
 }
 
-.imagePlaceholder {
-  background-color: rgb(235, 235, 235);
-  height: 200px;
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
+  height: 200px;
+}
+
+.productImage {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .productCardInfo {

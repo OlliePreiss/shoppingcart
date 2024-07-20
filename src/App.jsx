@@ -1,19 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 import './App.css'
-import Nav from './components/Nav/Nav'
-import BasketSidebar from './components/BasketSidebar.jsx/BasketSidebar'
-import PaymentSidebar from './components/PaymentSidebar/PaymentSidebar'
-import Browse from './components/Browse/Browse'
-import Checkout from './components/Checkout/Checkout'
-import Cover from './components/Cover/Cover'
+import routes from './routes'
+import products from './products'
+
+const router = createBrowserRouter(routes)
 
 function App() {
 
-
   return (
     <>
-      <Nav />
-      <Cover />
+      <RouterProvider router={router} />
     </>
   )
 }

@@ -1,12 +1,29 @@
 import classes from './PaymentSidebar.module.css'
 import downArrow from '../../assets/down-arrow-svg.svg'
+import { useState } from 'react'
 
 function PaymentSidebar() {
+  const [discountEntry, setDiscountEntry] = useState(true)
+
+  function handleDiscountClick() {
+    setDiscountEntry(!discountEntry)
+  }
+
   return(
     <div className={classes.sidebarContainer}>
       <div className={classes.discountCodeContainer}>
-        <p>Add a discount code</p>
-        <img src={downArrow} alt="" className={classes.downArrow}/>
+        <div className={classes.discountCodeFlexDiv}>
+          <p>Add a discount code</p>
+          <img src={downArrow} alt="" className={classes.downArrow} onClick={handleDiscountClick}/>
+        </div>
+          {discountEntry ? (
+            <div>
+              <input type="text" className={classes.discountInput}/>
+              <button className={classes.discountSubmit}> Submit </button>
+            </div>
+          ) : (
+            null
+          )}
       </div>
       <div className={classes.summaryContainer}>
         <div className={classes.subtotal}>
