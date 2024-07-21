@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { v4 as uuidv4 } from 'uuid';
+import { Outlet } from 'react-router-dom'
+import Nav from './components/Nav/Nav'
+import productSeed from './productSeed'
 import './App.css'
-import routes from './routes'
-import products from './products'
 
-const router = createBrowserRouter(routes)
 
 function App() {
+  const [products, setProducts] = useState(productSeed)
+  const basketSize = products.reduce((sum, product) => sum + product.quantity, 0)
 
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <div>
+      <Nav basketSize={basketSize} />
+      <Outlet context={[products, setProducts]} />
+    </div>
   )
 }
 

@@ -2,7 +2,10 @@ import classes from './PaymentSidebar.module.css'
 import downArrow from '../../assets/down-arrow-svg.svg'
 import { useState } from 'react'
 
-function PaymentSidebar() {
+function PaymentSidebar({
+  basketTotal
+}) {
+
   const [discountEntry, setDiscountEntry] = useState(true)
 
   function handleDiscountClick() {
@@ -28,7 +31,7 @@ function PaymentSidebar() {
       <div className={classes.summaryContainer}>
         <div className={classes.subtotal}>
           <p>Subtotal:</p>
-          <p>£20.00</p>
+          <p>£{basketTotal.toFixed(2)}</p>
         </div>
         <div className={classes.shipping}>
           <p>Shipping:</p>
@@ -37,7 +40,7 @@ function PaymentSidebar() {
         <hr className={classes.lineBreak}/>
         <div className={classes.total}>
           <p>Total:</p>
-          <p>£20.00</p>
+          <p>£{basketTotal.toFixed(2)}</p>
         </div>
         <div className={classes.paymentContainer}>
           <div className={classes.paymentButton}>

@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const products = [{
+const productSeed = [{
   id: uuidv4(),
   title: 'Cactus',
   price: 10.00,
@@ -8,8 +8,9 @@ const products = [{
   size: 'Medium',
   description: 'Cactus symbolizing desert life. Ideal for sharing your cactus garden or desert trips',
   image: null,
-  isFavourite: false,
+  isFavourite: true,
   inBasket: false,
+  quantity: 0
   },
   {
   id: uuidv4(),
@@ -21,6 +22,7 @@ const products = [{
   image: null,
   isFavourite: false,
   inBasket: false,
+  quantity: 0
   },
   {
   id: uuidv4(),
@@ -31,6 +33,7 @@ const products = [{
   image: null,
   isFavourite: false,
   inBasket: false,
+  quantity: 0
   },
   {
   id: uuidv4(),
@@ -40,7 +43,8 @@ const products = [{
   description: 'Shamrock symbolizing luck and Irish culture. Great for St. Patrick’s Day or anything Irish',
   image: null,
   isFavourite: false,
-  inBasket: false,
+  inBasket: true,
+  quantity: 2
   },
   {
   id: uuidv4(),
@@ -51,6 +55,7 @@ const products = [{
   image: null,
   isFavourite: false,
   inBasket: false,
+  quantity: 0
   },
   {
   id: uuidv4(),
@@ -61,7 +66,8 @@ const products = [{
   description: 'Four-leaf clover for good luck. Ideal for sharing lucky moments or finding rare surprises',
   image: null,
   isFavourite: false,
-  inBasket: false,
+  inBasket: true,
+  quantity: 1
   },
   {
   id: uuidv4(),
@@ -71,8 +77,9 @@ const products = [{
   size: 'Small',
   description: 'Seedling sprout, symbolizing new growth. Use it to highlight planting and gardening updates',
   image: null,
-  isFavourite: false,
+  isFavourite: true,
   inBasket: false,
+  quantity: 0
   },
   {
   id: uuidv4(),
@@ -84,6 +91,7 @@ const products = [{
   image: null,
   isFavourite: false,
   inBasket: false,
+  quantity: 0
   },
   {
   id: uuidv4(),
@@ -95,6 +103,7 @@ const products = [{
   image: null,
   isFavourite: false,
   inBasket: false,
+  quantity: 0
 }]
 
-export default products;
+export default productSeed;

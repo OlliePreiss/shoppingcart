@@ -5,8 +5,9 @@ import searchIcon from '../../assets/search-svg.svg'
 import basketIcon from '../../assets/bag-svg.svg'
 
 function Nav({
-  handleChange
+  basketSize
 }) {
+
   return(
     <div className={classes.navContainer}>
       <div className={classes.logoContainer}>
@@ -19,7 +20,8 @@ function Nav({
       </div>
       <div className={classes.tabContainer}>
           <Link to='/checkout' className={classes.paymentText}>
-            <img src={basketIcon} alt="" className={classes.basketIcon} onClick={handleChange}/>
+            <img src={basketIcon} alt="" className={classes.basketIcon}/>
+            <p> {basketSize} </p>
           </Link>
         <p className={classes.loginTab}> Login </p>
       </div>

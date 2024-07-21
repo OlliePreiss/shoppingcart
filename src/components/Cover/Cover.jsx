@@ -11,7 +11,6 @@ function Cover() {
 
   return(
     <>
-      <Nav />
       <div className={classes.coverContainer}>
         <div className='tagline'>
           <h1>Stylish plantpots for modern homes</h1>
