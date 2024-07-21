@@ -12,17 +12,17 @@ function Nav({
     <div className={classes.navContainer}>
       <div className={classes.logoContainer}>
         <img src={growLogo} alt="" className={classes.growLogo} />
-        <Link to='/' className={classes.growName}>Grow</Link>
+        <Link to='/' className={classes.growName}>Grow.</Link>
       </div>
       <div className={classes.searchContainer}>
         <img src={searchIcon} alt="" className='searchIcon'/>
         <input type='text' placeholder='Search Grow...' className={classes.searchBar}/>
       </div>
-      <div className={classes.tabContainer}>
+      <div className={classes.tabContainer} >
           <Link to='/checkout' className={classes.paymentText}>
             <img src={basketIcon} alt="" className={classes.basketIcon}/>
             { basketSize > 0 &&
-              <p> {basketSize} </p>
+              <div className={classes.number} > {basketSize} </div>
             }
           </Link>
         <p className={classes.loginTab}> Login </p>

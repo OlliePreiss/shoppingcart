@@ -13,10 +13,10 @@ function Cover() {
     <>
       <div className={classes.coverContainer}>
         <div className='tagline'>
-          <h1>Stylish plantpots for modern homes</h1>
+          <h1>Welcome to Grow.</h1>
         </div>
         <div className={classes.description}>
-          <h3>Explore our range of handmade, ceramic platpots and saucers, expertly crafted to enhance your home aesthetic</h3>
+          <h3>Stylish plants for modern homes. Explore our range of timeless and exotic plans. Delivered to your door, ready to grow.</h3>
         </div>
         <Link to="browse" className={classes.coverButton}>Explore our range</Link>
       </div>

@@ -35,7 +35,11 @@ function App() {
 
   function handleRemoveFromBasket(id) {
     const arr = products.map(product =>
-      product.id === id ? {...product, inBasket: false } : product,
+      product.id === id ? {...product,
+        inBasket: false,
+        quantity: 0
+      }
+      : product,
     );
     setProducts(arr);
   }
