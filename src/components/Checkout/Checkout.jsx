@@ -4,7 +4,13 @@ import PaymentSidebar from '../PaymentSidebar/PaymentSidebar';
 import { useOutletContext } from 'react-router-dom'
 
 function Checkout() {
-  const [products, setProducts] = useOutletContext()
+  const {
+    products,
+    setProducts,
+    handleAddItem,
+    handleSubtractItem,
+    handleRemoveFromBasket
+    } = useOutletContext()
   const basket = products.filter(product => product.inBasket)
   const basketTotal = basket.reduce((sum, product) => sum + (product.price * product.quantity), 0)
 
@@ -15,9 +21,17 @@ function Checkout() {
           <div className={classes.basketTitle}>
             <p> Your bag </p>
           </div>
-          {basket.map((product) =>
-            <CheckoutItem product={product} />
-          )}
+          {basket.length >= 1 ?
+            basket.map((product) =>
+              <CheckoutItem
+                product={product}
+                addItem={handleAddItem}
+                subtractItem={handleSubtractItem}
+                removeItem={handleRemoveFromBasket}
+                key={product.id}
+              />
+            ) : <p> Your basket is empty </p>
+          }
         </div>
         <PaymentSidebar basketTotal={basketTotal} />
       </div>

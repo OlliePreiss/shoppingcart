@@ -3,8 +3,13 @@ import BasketSidebarItem from './BasketSidebarItem';
 import crossIcon from '../../assets/cross-svg.svg';
 import { Link, useOutletContext } from 'react-router-dom';
 
-function BasketSidebar() {
-  const [products, setProducts] = useOutletContext()
+function BasketSidebar({
+  products,
+  setProducts,
+  addItem,
+  subtractItem,
+  removeFromBasket
+}) {
   const basket = products.filter(product => product.inBasket)
   const basketTotal = basket.reduce((sum, product) => sum + (product.price * product.quantity), 0)
 
@@ -15,7 +20,12 @@ function BasketSidebar() {
         <img src={crossIcon} alt="" className={classes.crossIcon} />
       </div>
       {basket.map(product => (
-          <BasketSidebarItem product={product} />
+          <BasketSidebarItem
+            product={product}
+            addItem={addItem}
+            subtractItem={subtractItem}
+            removeItem={removeFromBasket}
+          />
         ))}
       <div className={classes.totalContainer}>
         <p>Total</p>

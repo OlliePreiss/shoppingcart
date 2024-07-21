@@ -1,7 +1,12 @@
 import classes from './CheckoutItem.module.css'
+import { useOutletContext } from 'react-router-dom'
+import deleteIcon from '../../assets/delete-svg.svg'
 
 function CheckoutItem({
-  product
+  product,
+  addItem,
+  subtractItem,
+  removeItem
 }) {
 
   return(
@@ -12,8 +17,10 @@ function CheckoutItem({
         <p className='productDescription'> {product.description} </p>
         <p className='price'> £{product.price.toFixed(2)}</p>
         <div className={classes.quantityContainer}>
-          <p className='quantity'> x{product.quantity} </p>
-          <img src='' alt="" className={classes.deleteIcon}/>
+          <button className={classes.subtractButton} onClick={() => subtractItem(product.id)} > - </button>
+          <p className='quantity'> {product.quantity} </p>
+          <button className={classes.addButton} onClick={() => addItem(product.id)} > + </button>
+          <img src={deleteIcon} className={classes.deleteIcon} onClick={() => removeItem(product.id)} />
         </div>
       </div>
     </div>

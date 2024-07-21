@@ -2,7 +2,10 @@ import classes from './BasketSidebarItem.module.css'
 import deleteIcon from '../../assets/delete-svg.svg'
 
 function BasketSidebarItem({
-  product
+  product,
+  addItem,
+  subtractItem,
+  removeItem
 }) {
 
   return (
@@ -12,9 +15,11 @@ function BasketSidebarItem({
       <p className='productTitle'> {product.title} </p>
       <p className='price'> £{product.price.toFixed(2)} </p>
       <div className={classes.quantityContainer}>
-        <p className='quantity'> {product.quantity} </p>
-        <img src={deleteIcon} alt="" className={classes.deleteIcon}/>
-      </div>
+          <button className={classes.subtractButton} onClick={() => subtractItem(product.id)} > - </button>
+          <p className='quantity'> {product.quantity} </p>
+          <button className={classes.addButton} onClick={() => addItem(product.id)} > + </button>
+          <img src={deleteIcon} className={classes.deleteIcon} onClick={() => removeItem(product.id)} />
+        </div>
     </div>
   </div>
   )

@@ -6,11 +6,12 @@
   margin: 8px;
   background-color: rgb(245, 245, 245, 1);
   border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .productCardContainer:hover {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease-in-out;
+  background-color: rgb(235, 235, 235);
+  transition: background-color 0.2s ease-in-out;
 }
 
 .imageContainer {
@@ -39,4 +40,21 @@
 .productTitle {
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.basketIcon {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 24px;
+  padding-bottom: 8px;
+}
+
+.basketIcon:hover {
+  cursor: pointer;
 }

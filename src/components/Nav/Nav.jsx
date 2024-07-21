@@ -21,7 +21,9 @@ function Nav({
       <div className={classes.tabContainer}>
           <Link to='/checkout' className={classes.paymentText}>
             <img src={basketIcon} alt="" className={classes.basketIcon}/>
-            <p> {basketSize} </p>
+            { basketSize > 0 &&
+              <p> {basketSize} </p>
+            }
           </Link>
         <p className={classes.loginTab}> Login </p>
       </div>
